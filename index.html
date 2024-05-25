@@ -502,7 +502,18 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  
+  <script>
+    $(document).ready(function(){
+      // Smooth scrolling using jQuery easing
+      $('a.nav-link, .navbar-brand, .scroll-nav').click(function() {
+        var target = $(this.hash);
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, 'easeInOutExpo');
+        return false;
+      });
+    });
+  </script>
   <script src="js/main.js"></script>
     
   </body>
